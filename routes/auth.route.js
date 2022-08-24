@@ -11,7 +11,7 @@ module.exports = (app) => {
     authController.signup
   );
   app.post(
-    "/ucan/api/v1/auth/signin",
+    "/ucanji/api/v1/auth/signin",
     [validateSignInRequestBody],
     authController.signin
   );

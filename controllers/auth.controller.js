@@ -19,7 +19,7 @@ exports.signup = async (req, res) => {
       phoneNumber: req.body.phoneNumber,
     };
 
-    console.log(`#### ${response.userType} ${response.name} created ####`);
+    console.log(`####  ${response.name} created ####`);
     res.status(201).send(response);
   } catch (err) {
     console.log("#### error while user sign up #### ", err.message);
@@ -59,6 +59,8 @@ exports.signin = async (req, res) => {
       phoneNumber: user.phoneNumber,
       accesToken: token,
     });
+
+    console.log(`####  ${user.name} login successfully ####`);
   } catch (err) {
     console.log("#### Error while user sign in ##### ", err.message);
     res.status(500).send({
